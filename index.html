@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>CUZINHO HOJE ?</h1>
+	<title>Sim ou Não</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+        h1{
+
+            margin: 10PX;
+        }
+
+		.container {
+			text-align: center;
+		}
+
+		#nao {
+			display: inline-block;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #e74c3c;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+			transition: transform 0.3s ease;
+		}
+        #sim {
+			display: inline-block;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #3ce76f;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+			transition: transform 0.3s ease;
+		}
+
+		#nao.moved {
+			transform: translate(200px, -50px);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button id="sim" onclick="abrirVideo()">Sim</button>
+		<button id="nao" onclick="moverBotaoNao()">Não</button>
+	</div>
+
+	<script>
+		function abrirVideo() {
+			window.location.href = "https://www.youtube.com/watch?v=Gk-4MSkT53o&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3DVIDEOS%2BSOBRE%2BBENEFICIO%2BSEXO%2BANAL%26rlz%3D1C1VDKB_pt-PTBR1057BR1057%26sxsrf%3DAPwXEdeeLkYmPJV616G3LWz5zHL&source_ve_path=MjM4NTE&feature=emb_title";
+		}
+
+		function moverBotaoNao() {
+			var naoButton = document.getElementById("nao");
+			naoButton.classList.add("moved");
+			setTimeout(function() {
+				naoButton.classList.remove("moved");
+			}, 1000);
+		}
+	</script>
+</body>
+</html>
